@@ -40,6 +40,18 @@ public class StudentOperation {
 		return studentList;
 	}
 	
+	public Student giveStudent(int id) throws SQLException{
+		Student studentobj = new Student(0,null,null,null);
+		rs = stmt.executeQuery("select * from student where id=" + "'" + Integer.toString(id) + "'" );
+		while(rs.next()) {
+			studentobj.id = rs.getInt("ID");
+			studentobj.firstName = rs.getString("FIRSTNAME");
+			studentobj.lastName = rs.getString("LASTNAME");
+			studentobj.locationStudent = rs.getString("LOCATION_STUDENT");
+		}
+		return studentobj;
+	}
+	
 	@PreDestroy
 	public void endConnection() throws SQLException {
 		rs.close();
