@@ -70,6 +70,18 @@
 			<version>2.3.55</version>
 		</dependency>
 
+		<dependency>
+			<groupId>io.pivotal.cfenv</groupId>
+			<artifactId>java-cfenv-boot</artifactId>
+			<version>2.1.0.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.argo</groupId>
+			<artifactId>argo</artifactId>
+			<version>3.39</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
